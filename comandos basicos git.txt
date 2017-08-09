@@ -1,0 +1,33 @@
+1. git init         ---> inicializa git en el directorio donde te ubicas
+
+2. git add .        ---> subir todos tus cambios al indice antes de subirlo
+3. git commit -m "tu primer commit"     ---> titulo de tus cambio o descripcion
+4. git remote add origin https://github.com/linkTuProyecto    ---> link  conectar tu repositorio local con un repositorio remoto, puedeser github, gitlab, bigbacked ....
+5. git push  origin master        ---> subir todo tu proyecto a master y al repositorio en la nuve
+
+PASOS RECOMENDABLES ANTES DE SUBIR CAMBIOS A GIT ....
+
+2. git status    ----> verifica el estado del pryecto
+3. git add .      ---> actualiza el indice para preparar al commit. Se realiza antes del commit.
+4. git commit -m "tu commit"    ---> crea un commit o titulo para mencionar tus cambios antes de subir.
+5. git push origin tu_branch    ---> sube tus cambios al branch el cual indicas, en especifico al branch en el que te encuentras. si estastrabajando en master entonces "git push origin master".
+
+PASOS PARA BRANCHS (RAMAS) ...
+
+6. git branch nuevo_Branch    ---> crea un nuebo branch  para tu proyecto, por defecto solo biene "master" puedes crear otros para trabajar mejor.
+7. git checkout tu_branch     ---> Cambia el branch en el que te encuentras por el asignado "tu_Branch". Recomendable trabajar con otro branch distinto de "master".
+
+PASOS PARA JUNTAR CAMBIOS DE DISTINTOS BRANCH
+  es recomendable trabajar en branchs distintos de master, luego  subirlos  con el branch que estas trabajando, luego hacer un merge desde "master" haré un ejemplo...
+
+supongamos que estoy trabajando y por defecto me encuentro en el branch "master".
+
+1. git branch nuevoBranch       ---> creo un nuevo branch "nuevoBranch" con el cual trabajaré.
+2. git checkout nuevoBranch     ---> me cambio de branch a "nuevoBranch". En este caso como me encontraba en "master" ahora me encontraré en "nuevoBranch".
+3. git status       ---> visualiso todas las modificacioens que he hecho en el branch "nuevoBranch".
+4. git add.         ---> agrego los cambios al indice antes de subir de mi branch en el cual me encuentro "nuevoBranch".
+5. git commit -m "Cambios realizados de nuevoBranch"    ---> asigno un titulo o mensaje a los cambios antes de subir "nuevoBranch".
+6. git push origin nuevoBranch      --->subo todos los cambios realizado en mi branch, siempre se hace referencia "origin nuevoBranch" al branch en el cual estamos trabajando no a otro distinto como estoy trabajando en nuevoBranch entonces tengo que hacer la referencia a ese.
+7. git checkout master      ---> una ves que subí los cambios con el anteiror branch "nuevoBranch" me cambio de branch a master
+8. git merge nuevoBranch    --->  desde "master" hago la mescla con "nuevoBranch"  siempre tengo que hacer merges desde master por que es la rama principal en el cual se encuentra el  proyecto principal.
+8. git push origin master     ---> una ves hecho el merge desde "master" procedemos a subir nuestro proyecto  desde master el cual es el principal.
